@@ -1,6 +1,6 @@
 import sys
 
-with open(sys.argv[1], mode='r', encoding='utf-8') as file:
+with open('file', mode='r', encoding='utf-8') as file:
     lines = file.read()
 
 i = 0
@@ -31,6 +31,7 @@ while i < len(lines):
         i += 1
         while i < len(lines) and lines[i].isdigit():
             result += lines[i]
+            i += 1
         print('Int(' + result.lstrip('0') + ')')
     elif lines[i] == ':':
         i += 1
@@ -55,7 +56,7 @@ while i < len(lines):
         print('RParenthesis')
         i += 1
     elif lines[i] == ' ' or lines[i] == '\n':
-        i+=1
+        i += 1
     else:
         break
     result = ''

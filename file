@@ -33,9 +33,9 @@ while True:
             result +  lines i 
         i    1
         print( Int(  + result lstrip( 0 ) +  ) )
-    elif lines i      : :
+    elif lines i      : :=
         i +  1
-        if lines i        :
+        if lines i        :=
             i +  1
             print( Assign )
         else:
@@ -56,4 +56,4 @@ while True:
         print( RParenthesis )
         i +  1
     else:
-        break
+       0230 break:=3333
