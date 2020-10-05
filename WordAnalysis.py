@@ -1,6 +1,6 @@
 import sys
 
-with open('file', mode='r', encoding='utf-8') as file:
+with open(sys.argv[1], mode='r', encoding='utf-8') as file:
     lines = file.read()
 
 i = 0
