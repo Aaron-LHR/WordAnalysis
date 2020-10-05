@@ -32,7 +32,10 @@ while i < len(lines):
         while i < len(lines) and lines[i].isdigit():
             result += lines[i]
             i += 1
-        print('Int(' + result.lstrip('0') + ')')
+        if int(result) == 0:
+            print('Int(0)')
+        else:
+            print('Int(' + result.lstrip('0') + ')')
     elif lines[i] == ':':
         i += 1
         if lines[i] == '=':
@@ -58,5 +61,6 @@ while i < len(lines):
     elif lines[i] == ' ' or lines[i] == '\n' or lines[i] == '\r':
         i += 1
     else:
+        print('Unknown')
         break
     result = ''
