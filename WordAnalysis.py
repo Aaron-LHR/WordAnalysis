@@ -5,11 +5,11 @@ with open(sys.argv[1], mode='r', encoding='utf-8') as file:
 
 i = 0
 result = ''
-while True:
+while i < len(lines):
     if lines[i].isalpha():
         result += lines[i]
         i += 1
-        while lines[i].isalnum():
+        while i < len(lines) and lines[i].isalnum():
             result += lines[i]
             i += 1
         if result == 'BEGIN':
@@ -29,7 +29,7 @@ while True:
     elif lines[i].isdigit():
         result += lines[i]
         i += 1
-        while lines[i].isdigit():
+        while i < len(lines) and lines[i].isdigit():
             result += lines[i]
         print('Int(' + result.lstrip('0') + ')')
     elif lines[i] == ':':
