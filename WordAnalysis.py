@@ -55,7 +55,7 @@ while i < len(lines):
     elif lines[i] == ')':
         print('RParenthesis')
         i += 1
-    elif lines[i] == ' ' or lines[i] == '\n':
+    elif lines[i] == ' ' or lines[i] == '\n' or lines[i] == '\r':
         i += 1
     else:
         break
